@@ -159,20 +159,13 @@ case $NODE_CHOICE in
         sed -i "s|^miner_key = \".*\"|miner_key = \"$MINER_KEY\"|" $CONFIG_FILE
 
         # RPC 엔드포인트 선택
-        echo -e "${YELLOW}다음 중 하나의 RPC 엔드포인트를 선택하세요:${NC}"
-        echo "1) https://evmrpc-testnet.0g.ai/"
-        echo "2) https://rpc.ankr.com/0g_newton/"
-        echo "3) https://16600.rpc.thirdweb.com/"
-
-        read -p "선택 (1/2/3): " RPC_CHOICE
-
-        case $RPC_CHOICE in
-            1) export RPC_URL="https://evmrpc-testnet.0g.ai/" ;;
-            2) export RPC_URL="https://rpc.ankr.com/0g_newton/" ;;
-            3) export RPC_URL="https://16600.rpc.thirdweb.com/" ;;
-            *) echo -e "${RED}잘못된 선택입니다. 다시 시도하세요.${NC}" && exit 1 ;;
-        esac
-
+        echo -e "${YELLOW}RPC 엔드포인트를 설정합니다...${NC}"
+        export RPC_URL="https://evmrpc-testnet.0g.ai/"
+        
+        # 다른 RPC 옵션들 (참고용)
+        # RPC 옵션 2: https://rpc.ankr.com/0g_newton/
+        # RPC 옵션 3: https://16600.rpc.thirdweb.com/
+        
         # 기존 RPC 설정이 있는지 확인하고, 있으면 제거
         sed -i '/blockchain_rpc_endpoint = /d' $CONFIG_FILE
 
