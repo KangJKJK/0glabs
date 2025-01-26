@@ -255,6 +255,12 @@ EOF
         fi
         "
 
+        # Rust nightly 버전 설치 및 기본값 설정
+        echo -e "${YELLOW}Rust nightly 버전 설치 중...${NC}"
+        rustup install nightly
+        rustup default nightly
+        rustup update
+
         # Git 클론
         git clone -b v1.1.3 https://github.com/0glabs/0g-da-node.git
 
