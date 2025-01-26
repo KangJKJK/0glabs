@@ -16,7 +16,7 @@ echo "1) Storage 노드 설치 및 구동"
 echo "2) DA 노드 설치 및 구동"
 echo -e "${GREEN}스크립트작성자-https://t.me/kjkresearch${NC}"
 
-read -p "선택 (1/2/3): " NODE_CHOICE
+read -p "선택 (1/2): " NODE_CHOICE
 
 case $NODE_CHOICE in
     1)
