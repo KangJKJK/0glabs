@@ -150,7 +150,7 @@ case $NODE_CHOICE in
 
         # 기존 네트워크 부트 노드가 있는지 확인하고, 있으면 제거
         sed -i '/network_boot_nodes = \[/d' $CONFIG_FILE
-        sed -i '/# configured as well to enable UDP discovery./a network_boot_nodes = ["/ip4/54.219.26.22/udp/1234/p2p/16Uiu2HAmTVDGNhkHD98zDnJxQWu3i1FL1aFYeh9"]' $CONFIG_FILE
+        sed -i '/# configured as well to enable UDP discovery./a network_boot_nodes = ["/ip4/47.251.117.133/udp/1234/p2p/16Uiu2HAmTVDGNhkHD98zDnJxQWu3i1FL1aFYeh9wiQTNu4pDCgps","/ip4/47.76.61.226/udp/1234/p2p/16Uiu2HAm2k6ua2mGgvZ8rTMV8GhpW71aVzkQWy7D37TTDuLCpgmX"]' $CONFIG_FILE
 
         # 프로필 설정
         echo -e "${YELLOW}프로필 설정을 시작합니다...${NC}"
