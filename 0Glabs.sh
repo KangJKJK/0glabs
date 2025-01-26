@@ -276,7 +276,7 @@ EOF
         read -p "개인키를 입력하세요: " PRIVATEKEY
 
         # 구성파일 편집
-        rm -rf $HOME/0g-da-node/config.toml && curl -o $HOME/0g-da-node/config.toml https://raw.githubusercontent.com/zstake-xyz/test/refs/heads/main/0g_da_config.toml && nano $HOME/0g-da-node/config.toml
+        rm -rf $HOME/0g-da-node/config.toml && curl -o $HOME/0g-da-node/config.toml https://raw.githubusercontent.com/zstake-xyz/test/refs/heads/main/0g_da_config.toml
 
         # config.toml 파일 수정
         echo -e "${GREEN}config파일 수정 중...${NC}"
