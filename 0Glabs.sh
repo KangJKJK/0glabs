@@ -203,7 +203,6 @@ EOF
         # UFW 설정
         echo -e "${GREEN}UFW 설치 중...${NC}"
         sudo apt-get install -y ufw
-        read -p "UFW를 설치한 후 계속하려면 Enter를 누르세요..."
         
         echo -e "${YELLOW}UFW 활성화 중...반응이 없으면 엔터를 누르세요.${NC}"
         sudo ufw enable
